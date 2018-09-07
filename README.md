@@ -43,5 +43,9 @@ PuzzleManhattan e PuzzleLinearConflict utilizzano la funzione *manhattan* e la f
 I test su 100 casi per tipologia di funzione eurisica utilizzata vengono effettuati dalle seguenti funzioni: *testManhattan(number)*, *testLinearCoflict(number)*, *testDP(number)*, *testDPreflected(number)*. Per i test i valori di *seed* e *scrambles* vengono generati randomicamente tra valori compresi tra 110-140 per i seed e 30-50 per gli scrambles; tale limite è imposto per evitare di tempo d'esecuzione inaccettabile. Per eseguire ogni test si impiegano cira 2-3 ore.
 
 ### test.py
-Il file viene utilizzato per richiamare le funzioni implementae nel file **puzzle.py**.
+> Il file viene utilizzato per richiamare le funzioni implementae nel file **puzzle.py**.
+
+## Sitografia
+> Per realizzare il progetto sono state consultate le seguenti fonti:
+- https://github.com/aimacode
 
