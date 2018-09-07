@@ -48,4 +48,7 @@ I test su 100 casi per tipologia di funzione eurisica utilizzata vengono effettu
 ## Sitografia
 > Per realizzare il progetto sono state consultate le seguenti fonti:
 - https://github.com/aimacode
+- [Korf & Felner(2002)](https://www.sciencedirect.com/science/article/pii/S0004370201000923)
+- [Implementing BFS for Pattern Database](https://algorithmsinsight.wordpress.com/graph-theory-2/implementing-bfs-for-pattern-database/)
+- [Heuristics for sliding-tile puzzles](https://slideplayer.com/slide/1511516/)
 
