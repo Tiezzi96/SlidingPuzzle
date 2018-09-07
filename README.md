@@ -19,6 +19,14 @@ Il progetto è suddiviso in 4 differenti *Python files*:
 implementa la funzione euristica che calcola la **distanza di Manhattan**, sia la funzione *lcheuristic(self)* che realizza la 
 l'euristica **linear conflict**. Quest'ultima funzione, oltre al valore della distanza di Manhattan, utilizza il valore di ritorno di altre due funzioni, *LCH(self)* e *LCV(self)*, che calcolano i conflitti lineari presenti nello stato corrente del puzzle rispettivamente sulle righe e sulle colonne. Per poter eseguire tale controllo, si ritiene necessario calcolare in precedenza, per ogni casella del puzzle, i conflitti che potenzialmente potrebbero incorrere sia sulle righe che sulle colonne; a tale scopo sono state implementate le funzioni *potlch(self)* e *potlcv(self)*. 
 
+#### A*
+
+> Le funzioni *astar_search(Problem, h=None)*, *best_first_graph_search(problem, f)* e *graph_search(problem, fringe)* costituiscono la strategia di ricerca informata **A\***. Sia la funzione *astar_search* che la funzione *best_first_graph_search* salvano il valore di *h(n)* e *f(n)*, richiamando la funzione *memoize(fn, slot=None)* che salva il valore passato come parametro in una slot precisa, se indicata, o in un dizionario. La funzione *graph_search*, attraverso una ricerca su grafo di tipo BFS utilizzando come frontiera una lista oridinata in ordine decrescente, ricava lo stato obiettivo del puzzle o estende il nodo corrente aggiungedo i figli alla frontiera. Oltre allo stato obiettivo viene riportato il numero di nodi espansi, che verrà utilizzato durante la fase di test.
+
+#### Tipologie di Puzzle
+
+> Per poter implementare la ricerca **A\*** con le quattro tipologie di euristiche descritte nella relazione è necessario realizzare una diversa implementazione della funzione *h* contenuta nella classe Puzzle. La classi *PuzzleManhattan(Puzzle)*,*PuzzleLinearConflict(Puzzle)*, *PuzzleDP(Puzzle)* e *PuzzleDPReflected(Puzzle)* servono allo scopo.
+PuzzleManhattan e PuzzleLinearConflict utilizzano la funzione *manhattan* e la funzione *lcheuristic* per sovrascrivere la funzione *h*. PuzzleDP e PuzzleDPreflected invece per effettuare l'override di *h* devono prima allocare i dizionari realizzati nel file **permutation.py** e salvati su file pickle differenti, uno per ogni gruppo realizzato; tale compito viene svolto dalla funzione *disjoint pattern*. La funzione *h*, dopo aver suddiviso lo stato corrente del nodo nei gruppi del database, controlla se la loro configurazione trova riscontro all'interno dei vari dizionari ed, in caso positivo, estrae il valore dell'euristica. infine il valore dell'euristica di ogni gruppo viene sommata generando il valore di h per lo stato del puzzle. Le due classi hanno un comportamento analogo salvo per l'utilizzo, da parte di PuzzleDPreflected, di 2 differenti disjoint patter database e ritoro del valore massimo tra le 2 euristiche generate.  
 
 
 
