@@ -32,7 +32,7 @@ PuzzleManhattan e PuzzleLinearConflict utilizzano la funzione *manhattan* e la f
     if len(dictionary) >= 5765760:
     pickle.dump(dictionary, open("DP9-10-11-13-14-15-new.p", "wb"))
 
-sostituiendo alla prima istruzione il valore 4 al posto del 7 se si desidera ricercare il pattern di 3, alla seconda 3360 sempre per ricercare il pattern 3 e alla terza bisogna scegliere dove caricare il file. IL blocco di codice fornito sopra va visto come tre istruzioni disgiunte.
+> sostituiendo alla prima istruzione il valore 4 al posto del 7 se si desidera ricercare il pattern di 3, alla seconda 3360 sempre per ricercare il pattern 3 e alla terza bisogna scegliere dove caricare il file. IL blocco di codice fornito sopra va visto come tre istruzioni disgiunte.
 
 ### puzzle.py 
 > Il file viene utilizzato per realizzare alcuni test di ricerca, impiegando l'algoritmo A\*, partendo da una particolare configurazione dello stato del puzzle, variando la tipologia di funzione euristica utilizzata. Le funzioni necessarie vengono importate dal file main.py. Dopo aver allocato il Puzzle con un numero arbitrario di *seed* e *scrambles*, si chiama la funzione *astar_search*, passandole il Puzzle come parametro. I valori di ritorno vengono salvati in *solution* e *counter* che solo la soluzione del puzzle e il numero di nodi espansi durante la ricerca. La classe *time* viene utilizzata per conoscere l'istante prima e dopo l'esecuzione della ricerca; la differenza tra i due valori indica il tempo di esecuzione di A\*. Le istruzioni seguenti sono necessarie per calcolare il cammino percorso dalla ricerca sul grafo e visualizzarlo:
