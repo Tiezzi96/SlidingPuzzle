@@ -2,7 +2,7 @@
 
 ## Analisi del Progetto
 
-Il progetto è suddiviso in 4 differenti *Python files*:
+Il progetto è suddiviso in 4 differenti *Python file*:
 - ***main.py***
 - ***test.py***
 - ***puzzle.py***
